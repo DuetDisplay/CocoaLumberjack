@@ -17,7 +17,7 @@ jobs:
       matrix:
         sdk: [iphonesimulator, macosx]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: ./Scripts/ci-select-xcode.sh
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:
@@ -34,7 +34,7 @@ jobs:
         scheme: [CocoaLumberjack, CocoaLumberjackSwift]
         sdk: [iphonesimulator, macosx, watchsimulator, appletvsimulator]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: ./Scripts/ci-select-xcode.sh
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:

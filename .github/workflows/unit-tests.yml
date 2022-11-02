@@ -14,7 +14,7 @@ jobs:
   swiftpm:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: ./Scripts/ci-select-xcode.sh
       - name: Run SwiftPM Tests
         run: swift test --enable-code-coverage --parallel
@@ -42,7 +42,7 @@ jobs:
             destination: 'platform=macosx'
             skip-testing: 'OS X Tests/DDFileLoggerPerformanceTests'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: ./Scripts/ci-select-xcode.sh
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:
