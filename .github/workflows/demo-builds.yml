@@ -42,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ./Scripts/ci-select-xcode.sh
-      - uses: sersoft-gmbh/xcodebuild-action@v1
+      - uses: sersoft-gmbh/xcodebuild-action@v2
         with:
           workspace: Demos/Demos.xcworkspace
           scheme: ${{matrix.scheme}}
